@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="759" failures="0" errors="0" time="23.182418">
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio" timestamp="2026-05-22T16:18:28+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="15" failures="0" time="9.359000" name="github.com/sigstore/fulcio/cmd/app" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert/invalid_path" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert/invalid_key_and_cert" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert/invalid_key,_valid_cert" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert/valid_key,_invalid_cert" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert/valid_key,_valid_cert" time="1.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestCachedTLSCert" time="1.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestHTTPCORSSupport" time="0.420000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestHTTPDoesntLeakGRPCHeaders" time="0.410000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestIssue1267" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex/http" time="0.420000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex/grpc" time="0.410000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex/compare_root_certs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex/prometheus" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex/healthz" time="0.410000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/app" name="TestDuplex" time="6.250000"></testcase>
+	</testsuite>
+	<testsuite tests="30" failures="0" time="13.482000" name="github.com/sigstore/fulcio/cmd/certificate_maker" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestGetConfigValue/get_KMS_type_from_flag" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestGetConfigValue/get_AWS_region_from_flag" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestGetConfigValue/get_Azure_tenant_ID_from_flag" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestGetConfigValue/get_GCP_credentials_file_from_flag" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestGetConfigValue" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestInitLogger" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/missing_KMS_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/invalid_KMS_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/missing_root_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/missing_leaf_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/GCP_KMS_with_credentials_file" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/Azure_KMS_without_tenant_ID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/AWS_KMS_test" time="10.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/HashiVault_KMS_without_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/HashiVault_KMS_without_address" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/nonexistent_intermediate_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate/invalid_intermediate_template_json" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRunCreate" time="10.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestCreateCommand" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestRootCommand" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestEnvironmentVariableOverrides/environment_overrides_flags" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestEnvironmentVariableOverrides/azure_kms_environment" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestEnvironmentVariableOverrides/hashivault_kms_environment" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestEnvironmentVariableOverrides" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate/valid_template_paths" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate/nonexistent_root_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate/invalid_root_template_json" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate/nonexistent_leaf_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate/invalid_leaf_template_json" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/cmd/certificate_maker" name="TestTemplateValidationInRunCreate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/cmd/fetch_ca_cert" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/examples/request-certificate" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="3.051000" name="github.com/sigstore/fulcio/pkg/api" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/api" name="TestUserAgentOption" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/api" name="TestTimeoutOption" time="1.000000"></testcase>
+	</testsuite>
+	<testsuite tests="10" failures="0" time="4.343000" name="github.com/sigstore/fulcio/pkg/ca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestMakeX509" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestVerifyCertChain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromDER/Good_certificate_chain_should_parse_without_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromDER" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromPEM/Good_certificate_chain_should_parse_without_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromPEM/Bad_leaf_certificate_format_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromPEM/Bad_chain_certificate_format_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestCreateCSCFromPEM" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestSignerCerts" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca" name="TestSignerCertsMutex" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="0.598000" name="github.com/sigstore/fulcio/pkg/ca/baseca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/baseca" name="TestBaseCARoot" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/baseca" name="TestBaseCAGetSignerWithChain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/baseca" name="TestCreatePrecertificateAndIssueFinalCertificate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="3.721000" name="github.com/sigstore/fulcio/pkg/ca/ephemeralca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/ephemeralca" name="TestNewEphemeralCA" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="5" failures="0" time="4.169000" name="github.com/sigstore/fulcio/pkg/ca/fileca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/fileca" name="TestNewFileCA" time="0.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/fileca" name="TestCertUpdate" time="0.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/fileca" name="TestValidLoadKeyPair" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/fileca" name="TestInvalidLoadKeyPair" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/fileca" name="TestIOWatch" time="1.010000"></testcase>
+	</testsuite>
+	<testsuite tests="4" failures="0" time="2.593000" name="github.com/sigstore/fulcio/pkg/ca/googleca/v1" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/googleca/v1" name="TestCheckSignatureECDSA" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/googleca/v1" name="TestCheckSignatureRSA" time="0.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/googleca/v1" name="TestReq" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/googleca/v1" name="TestReqCertAuthority" time="0.080000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="2.812000" name="github.com/sigstore/fulcio/pkg/ca/kmsca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/kmsca" name="TestNewKMSCA" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/ca/pkcs11ca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="1.579000" name="github.com/sigstore/fulcio/pkg/ca/tinkca" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ca/tinkca" name="TestNewTinkCA" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="28" failures="0" time="3.877000" name="github.com/sigstore/fulcio/pkg/certificate" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestExtensions/Missing_issuer_extension_leads_to_render_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestExtensions/complete_extensions_list_should_create_all_extensions_with_correct_OIDs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestExtensions" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestParseDERString" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsRendering" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsParsing" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessAccountID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessOrgID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessProjectID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessPipelineID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessEnvironmentID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessEnvironmentType" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessConnectorID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessConnectorName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessServiceID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessServiceName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessTriggeredByName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessTriggerByEmail" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessStageType" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessStepType" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessArtifactID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessArtifactName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessArtifactDigest" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessArtifactType" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessTag" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues/HarnessStepExecutionID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certificate" name="TestHarnessExtensionsOIDValues" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="70" failures="0" time="4.881000" name="github.com/sigstore/fulcio/pkg/certmaker" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/valid_PEM_certificate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/file_not_found" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/invalid_PEM_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/wrong_PEM_block_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/empty_PEM_block" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile/malformed_certificate_data" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestLoadCertificateFromFile" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/matching_ECDSA_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/matching_RSA_keys" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/matching_Ed25519_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/mismatched_ECDSA_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/mismatched_key_types_(RSA_vs_ECDSA)" time="0.040000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/nil_certificate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/KMS_error_getting_public_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch/nil_signer_verifier" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateCertificateKeyMatch" time="0.060000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/same_RSA_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/different_RSA_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/same_ECDSA_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/different_ECDSA_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/same_Ed25519_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/different_Ed25519_keys" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/RSA_vs_ECDSA" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/ECDSA_vs_Ed25519" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual/RSA_vs_Ed25519" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestPublicKeysEqual" time="0.090000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestCreateCertificates" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestCreateCertificatesWithExistingRoot" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestCreateCertificatesWithExistingRootAndIntermediate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestCreateCertificatesWithExistingRootDirectSigning" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestCreateCertificatesWithKeyMismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/valid_AWS_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/valid_GCP_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/valid_Azure_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/valid_HashiVault_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/missing_AWS_region" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/missing_Azure_tenant_ID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/missing_HashiVault_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/missing_HashiVault_address" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/unsupported_KMS_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/invalid_AWS_key_ID_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/AWS_key_ID_region_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/invalid_GCP_key_ID_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/invalid_Azure_key_ID_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/invalid_HashiVault_key_ID_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig/missing_key_ID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateKMSConfig" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestWriteCertificateToFile/valid_certificate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestWriteCertificateToFile/nil_certificate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestWriteCertificateToFile/certificate_with_no_raw_data" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestWriteCertificateToFile/invalid_file_path" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestWriteCertificateToFile" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestParseTemplate/valid_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestParseTemplate/invalid_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestParseTemplate/nonexistent_file" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestParseTemplate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateTemplate/valid_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateTemplate/invalid_template_json" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateTemplate/nonexistent_file" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestValidateTemplate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestDeterminePublicKeyAlgorithm/ECDSA_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestDeterminePublicKeyAlgorithm/RSA_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestDeterminePublicKeyAlgorithm/Ed25519_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestDeterminePublicKeyAlgorithm/Unknown_key_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestDeterminePublicKeyAlgorithm" time="0.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestGetDefaultTemplate/root_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestGetDefaultTemplate/intermediate_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestGetDefaultTemplate/leaf_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestGetDefaultTemplate/invalid_type" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/certmaker" name="TestGetDefaultTemplate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="9" failures="0" time="2.836000" name="github.com/sigstore/fulcio/pkg/challenges" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/ecdsa-p256" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/ecdsa-p384" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/ecdsa-p521" time="0.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/rsa-2048" time="0.110000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/rsa-3072" time="0.310000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/rsa-4096" time="0.540000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature/ed25519" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestCheckSignature" time="0.970000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/challenges" name="TestParsePublicKey" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="88" failures="0" time="22.007000" name="github.com/sigstore/fulcio/pkg/config" timestamp="2026-05-22T16:18:29+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestLoadYamlConfig" time="1.070000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestLoadJsonConfig" time="0.210000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestParseTemplate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestLoadDefaults" time="2.430000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMetaURLs/AWS_meta_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMetaURLs/GKE_meta_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMetaURLs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/good_spiffe_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/spiffe_issuer_requires_a_trust_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/spiffe_issuer_cannot_be_a_meta_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/invalid_spiffe_trust_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/uri_issuer_requires_a_subject_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/type_without_challenge_claim_is_invalid" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/uri_issuer_and_subject_domains_must_have_same_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/username_issuer_requires_a_subject_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/username_issuer_and_subject_domains_must_have_same_top-level_hostname" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/nil_config_isn&#39;t_valid" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/good_uri_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/uri_issuer_url_should_contain_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/good_username_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/username_subject_domain_should_not_contain_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/non_email_issuer_with_issuer_claim_set_is_invalid" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/uri_subject_domain_should_contain_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/uri_issuer_and_subject_domains_must_have_same_top-level_hostname" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig/username_issuer_url_should_contain_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateConfig" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/issuer_subdomain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/subject_subdomain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/subdomain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/scheme_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/subject_domain_too_short" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/issuer_domain_too_short" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/domain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed/top_level_domain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_isURISubjectAllowed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/issuer_subdomain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/subject_subdomain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/subdomain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/subject_domain_too_short" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/issuer_domain_too_short" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/domain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/domain_mismatch,_subdomain_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain/top_level_domain_mismatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_validateAllowedDomain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestSkipEmailVerificationParsing" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="Test_issuerToChallengeClaim" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestToIssuers" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifierCache" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifierCacheWithCustomCA" time="0.080000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifyK8sDefaultIssuer/OIDCIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifyK8sDefaultIssuer/MetaIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifyK8sDefaultIssuer/Unauthorized" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestVerifyK8sDefaultIssuer" time="0.090000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetIssuerWithFallback/Known_issuer_-_returns_configured" time="0.630000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetIssuerWithFallback/Unknown_issuer_-_fallback_enabled_(default)" time="0.240000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetIssuerWithFallback/Unknown_issuer_-_fallback_disabled" time="0.210000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetIssuerWithFallback/Meta_issuer_match_-_uses_meta_config" time="0.210000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetIssuerWithFallback" time="1.290000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheck/Empty_ClientID_-_should_skip_check" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheck/Non-empty_ClientID_-_should_not_skip_check" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheck" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs/single_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs/empty_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs/two_exact_values" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs/exact_and_regex_values" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs/single_regex_value_no_comma" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestHasMultipleClientIDs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/single_ClientID_-_go-oidc_handles_validation" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/empty_ClientID_-_no_validation" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_-_exact_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_-_first_value_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_-_no_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_with_regex_-_regex_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_with_regex_-_regex_no_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID/multi_ClientID_-_multiple_audiences_one_matches" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestValidateClientID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheckMultipleClientIDs/single_ClientID_-_should_not_skip" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheckMultipleClientIDs/multiple_ClientIDs_-_should_skip" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheckMultipleClientIDs/empty_ClientID_-_should_skip" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestGetVerifierSkipClientIDCheckMultipleClientIDs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMultiClientIDConfigValidation/valid_multi_client-id" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMultiClientIDConfigValidation/invalid_regex_in_client-id" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMultiClientIDConfigValidation/invalid_regex_in_meta_issuer_client-id" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMultiClientIDConfigValidation/single_client-id_unchanged" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestMultiClientIDConfigValidation" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/config" name="TestLoadFulcioConfig" time="15.930000"></testcase>
+	</testsuite>
+	<testsuite tests="2" failures="0" time="4.185000" name="github.com/sigstore/fulcio/pkg/ctl" timestamp="2026-05-22T16:18:30+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ctl" name="TestBuildCTChain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/ctl" name="TestToAddChainResponse" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/generated/protobuf" timestamp="2026-05-22T16:18:31+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/generated/protobuf/legacy" timestamp="2026-05-22T16:18:31+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="9" failures="0" time="3.711000" name="github.com/sigstore/fulcio/pkg/harness/clients" timestamp="2026-05-22T16:18:31+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNewNgManagerClient/Valid_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNewNgManagerClient/Empty_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNewNgManagerClient/Invalid_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNewNgManagerClient" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNgClient_GetToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNgClient_GetToken_Error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestNgClient_GetToken_InvalidJSON" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestMockNgManagerClient" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/clients" name="TestMockNgManagerClient_NotMocked" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="20" failures="0" time="2.805000" name="github.com/sigstore/fulcio/pkg/harness/config" timestamp="2026-05-22T16:18:32+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestDefaultConfig" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/Auth_disabled_is_valid" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/JWT_auth_only" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/PAT_auth_only" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/Both_auth_methods" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/No_auth_methods_configured" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/PAT_auth_incomplete_-_missing_secret" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid/PAT_auth_incomplete_-_missing_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_IsValid" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_JWTAuthEnabled/JWT_auth_enabled" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_JWTAuthEnabled/JWT_auth_disabled_-_empty_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_JWTAuthEnabled/JWT_auth_disabled_-_no_JWT_secret" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_JWTAuthEnabled/JWT_auth_disabled_-_no_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_JWTAuthEnabled" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled/PAT_auth_enabled" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled/PAT_auth_disabled_-_no_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled/PAT_auth_disabled_-_no_secret" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled/PAT_auth_disabled_-_empty_secret" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled/PAT_auth_disabled_-_no_config" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/config" name="TestConfig_PATAuthEnabled" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="3" failures="0" time="2.969000" name="github.com/sigstore/fulcio/pkg/harness/jwt" timestamp="2026-05-22T16:18:32+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/jwt" name="TestGenerateCrossServiceJwt" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/jwt" name="TestGenerateCrossServiceJwt_DifferentSecrets" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/jwt" name="TestGenerateCrossServiceJwt_EmptySecret" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="33" failures="0" time="3.827000" name="github.com/sigstore/fulcio/pkg/harness/middleware" timestamp="2026-05-22T16:18:32+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestExtractToken/No_auth_headers" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestExtractToken/X-Service-Authorization_header_with_Bearer_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestExtractToken/X-Api-Key_header" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestExtractToken/Both_headers_-_X-Api-Key_takes_priority" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestExtractToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/Legacy_format_(3_parts)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/New_format_(4_parts)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/SAT_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/Invalid_format_(2_parts)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/Invalid_format_(5_parts)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey/Empty_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestNewAPIKey" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateJWT/Valid_JWT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateJWT/Invalid_JWT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateJWT/Empty_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateJWT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateJWTNotConfigured" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Valid_token" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Token_expired" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Account_mismatch_in_context" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Account_mismatch_in_apiKey" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Wrong_prefix" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Wrong_password" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Empty_account_in_context_(allowed)" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken/Empty_account_in_apiKey_(allowed)" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestValidateToken" time="0.240000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_DisabledAuth" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_HealthzExcluded" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_ValidJWT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_InvalidJWT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_NoAuthHeader" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_ValidPAT" time="0.090000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/middleware" name="TestHarnessAuthMiddleware_InvalidPAT" time="0.100000"></testcase>
+	</testsuite>
+	<testsuite tests="12" failures="0" time="3.431000" name="github.com/sigstore/fulcio/pkg/harness/request" timestamp="2026-05-22T16:18:32+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestTokenScheme_String/Unknown" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestTokenScheme_String/PAT" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestTokenScheme_String/Bearer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestTokenScheme_String" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestAccountContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestUserEmailContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestUserNameContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestUserIDContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestTokenSchemeContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestPluginAuthContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestRawTokenContext" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/request" name="TestContextChaining" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="9" failures="0" time="3.146000" name="github.com/sigstore/fulcio/pkg/harness/token" timestamp="2026-05-22T16:18:33+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestNewService/JWT_auth_enabled" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestNewService/JWT_auth_disabled_-_no_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestNewService/JWT_auth_disabled_-_no_secret" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestNewService" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestService_ServeHTTP_ValidRequest" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestService_ServeHTTP_MissingToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestService_ServeHTTP_InvalidToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestService_ServeHTTP_MethodNotAllowed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/harness/token" name="TestService_ServeHTTP_WithAudience" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/harness/types" timestamp="2026-05-22T16:18:33+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="16" failures="0" time="3.270000" name="github.com/sigstore/fulcio/pkg/identity" timestamp="2026-05-22T16:18:33+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/empty_pool_should_never_authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/match_then_reject_all_pool_should_never_authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_only_pool_should_allow_example.com_tokens" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_only_pool_should_not_allow_other.com_tokens" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_and_other.com_pool_should_match_other.com_token_to_alice" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_and_other.com_pool_should_match_example.com_token_to_bob" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_and_other.com_pool_should_reject_bad.com_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool/example.com_and_other.com_pool_should_reject_badly_formatted_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestIssuerPool" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/no_issuer_claim" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/Not_enough_token_parts" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/Too_many_token_parts" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/Bad_claims_base64_encoding" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/Bad_claims_JSON_format" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL/issuer_example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity" name="TestExtractIssuerURL" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="9" failures="0" time="3.290000" name="github.com/sigstore/fulcio/pkg/identity/base" timestamp="2026-05-22T16:18:33+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMetaURLs/AWS_meta_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMetaURLs/GKE_meta_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMetaURLs" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMatch/standard_url" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMatch/url_doesn&#39;t_match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMatch/valid_regex" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMatch/invalid_regex" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestMatch" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/base" name="TestAuthenticate" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="13" failures="0" time="3.494000" name="github.com/sigstore/fulcio/pkg/identity/buildkite" timestamp="2026-05-22T16:18:33+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestJobPrincipalFromIDToken/Token_missing_organization_slug_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestJobPrincipalFromIDToken/Token_missing_pipeline_slug_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestJobPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestJobPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestEmbed/Buildkite_job_challenge_should_have_issue,_subject_and_url_embedded/Certifificate_should_have_correct_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestEmbed/Buildkite_job_challenge_should_have_issue,_subject_and_url_embedded" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestEmbed/Buildkite_job_principal_with_bad_URL_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/buildkite" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="14" failures="0" time="3.358000" name="github.com/sigstore/fulcio/pkg/identity/chainguard" timestamp="2026-05-22T16:18:34+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestJobPrincipalFromIDToken/Human_SSO_token_(with_email)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestJobPrincipalFromIDToken/Service_principal_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestJobPrincipalFromIDToken/Human_SSO_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestJobPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Service_Principal/Certificate_SAN_has_correct_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Service_Principal/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Service_Principal" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Human_SSO/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Human_SSO/Certificate_SAN_has_correct_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed/Chainguard_Human_SSO" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/chainguard" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="80" failures="0" time="3.565000" name="github.com/sigstore/fulcio/pkg/identity/ciprovider" timestamp="2026-05-22T16:18:34+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestWorkflowPrincipalFromIDToken/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestWorkflowPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/integer_claims_are_converted_to_a_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/float_claims_that_are_a_whole_number_are_converted_to_a_string_and_formatted_as_an_int" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/float_claims_are_converted_to_a_string_with_no_rounding_down" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/float_claims_are_converted_to_a_string_with_no_rounding_up" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/token_has_no_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/string_claims_pass_through_unchanged" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/empty_string_claims_pass_through_unchanged" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims/bool_claims_pass_through_unchanged" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestGetTokenClaims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Valid_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Template_with_HTML" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Missing_key_for_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/If_else_template_using_else_condition" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Empty_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Should_return_empty_string_for_empty_default_wrapped_in_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Empty_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Replaceable_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/If_else_template" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Template_with_slash_and_dots_in_key" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Raise_error_for_empty_key_in_comparison" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Should_use_default_when_claim_doesn&#39;t_exist" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Should_prior_claims_over_defaults_when_they_has_the_same_name" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Should_return_empty_string_for_empty_default_with_template_and_additional_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Missing_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace/Should_return_empty_string_for_empty_default" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestApplyTemplateOrReplace" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certifificate_should_have_correct_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_repository_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_build_config_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_environment" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_builder_signer_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_SHA_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_workflow_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_builder_signer_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_runner_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_owner_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_owner_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_build_config_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_build_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_run_invocation_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repository_visibility_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_should_have_all_GitHub_workflow_extensions_and_issuer_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_owner_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_SHA_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_owner_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_build_config_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_build_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_run_invocation_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repository_visibility_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_should_not_have_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certifificate_should_have_correct_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_build_config_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_builder_signer_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_runner_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_source_repo_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_workflow_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_repository_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension/Certificate_has_correct_builder_signer_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed/GitHub_workflow_challenge_without_environment_claim_should_not_have_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/ciprovider" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="20" failures="0" time="3.459000" name="github.com/sigstore/fulcio/pkg/identity/codefresh" timestamp="2026-05-22T16:18:34+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Valid_token_-_Manual_trigger_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Valid_token_-_Git_push_trigger_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Valid_token_-_Git_pull_request_trigger_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Token_missing_workflow_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Token_missing_account_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken/Token_missing_pipeline_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestJobPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_build_config_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_run_invocation_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_SAN_has_correct_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_builder_signer_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_runner_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/codefresh" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="21" failures="0" time="3.672000" name="github.com/sigstore/fulcio/pkg/identity/email" timestamp="2026-05-22T16:18:34+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Custom_issuer_claim" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/String_email_verified_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Email_not_verified_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Email_not_verified_but_skip-email-verification_enabled_should_succeed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/No_issuer_configured_for_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Custom_issuer_claim_missing" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Email_not_verified_(false)_but_skip-email-verification_enabled_should_succeed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Email_verified_with_skip-email-verification_enabled_should_succeed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Missing_email_claim_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Invalid_email_address_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken/Well_formed_token_has_no_errors" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestName/name_should_match_email_address" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestEmbed/should_set_issuer_extension_and_email_subject/Certificate_should_have_alice@example.com_email_subject" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestEmbed/should_set_issuer_extension_and_email_subject/Certificate_should_have_issuer_extension_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestEmbed/should_set_issuer_extension_and_email_subject" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/email" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="13" failures="0" time="3.589000" name="github.com/sigstore/fulcio/pkg/identity/fallback" timestamp="2026-05-22T16:18:35+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestFallbackIssuer_Match/always_matches_with_valid_token" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestFallbackIssuer_Match/always_matches_with_any_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestFallbackIssuer_Match/always_matches_with_empty_string" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestFallbackIssuer_Match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/valid_token_with_Google_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/valid_token_with_custom_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/malformed_token_-_less_than_3_parts" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/malformed_token_-_more_than_3_parts" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/invalid_base64_encoding" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/invalid_JSON_payload" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL/missing_issuer_claim" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestExtractIssuerURL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/fallback" name="TestIssuer" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="47" failures="0" time="3.202000" name="github.com/sigstore/fulcio/pkg/identity/github" timestamp="2026-05-22T16:18:35+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_repository_owner_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_workflow_sha_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_run_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_run_attempt_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_repository_visibility_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_sha_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_event_name_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_repository_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_workflow_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_repository_id_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_job_workflow_ref_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_workflow_ref_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_runner_environment_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_repository_owner_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_ref_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken/Token_missing_job_workflow_sha_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestWorkflowPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_SHA_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_builder_signer_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_owner_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_build_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repository_visibility_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certifificate_should_have_correct_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_repository_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_workflow_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_owner_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_build_config_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_run_invocation_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_builder_signer_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_runner_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_source_repo_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set/Certificate_has_correct_build_config_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_challenge_should_have_all_Github_workflow_extensions_and_issuer_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed/Github_workflow_value_with_bad_URL_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/github" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="30" failures="0" time="3.323000" name="github.com/sigstore/fulcio/pkg/identity/gitlabcom" timestamp="2026-05-22T16:18:36+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Token_missing_project_visibility_is_ok" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Token_missing_pipeline_source_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Token_missing_project_path_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Token_missing_ci_config_ref_uri_claim_should_be_rejected" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken/Token_missing_ci_config_sha_claim_is_ok" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestJobPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_build_config_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_builder_signer_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_digest_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repository_visibility_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_ref_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_owner_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_build_trigger_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_run_invocation_ID_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_source_repo_owner_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_build_config_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_issuer_(v2)_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_builder_signer_URI_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded/Certificate_has_correct_runner_environment_extension" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_challenge_should_have_issue,_subject_and_url_embedded" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed/GitLab_job_principal_with_bad_URL_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/gitlabcom" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="31" failures="0" time="3.403000" name="github.com/sigstore/fulcio/pkg/identity/harness" timestamp="2026-05-22T16:18:36+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestIssuer/base_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestIssuer/account-level_issuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestPrincipalFromIDToken/Valid_token_with_all_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestPrincipalFromIDToken/Valid_token_with_minimal_claims_(all_optional_fields_empty)" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestPrincipalFromIDToken/Valid_token_with_partial_artifact_fields" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestName/account_ID_as_subject" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestName/subject_with_special_characters" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestName/empty_subject" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestName/subject_with_alphanumeric" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbed/harness_pipeline_with_app.harness.io_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbed/harness_pipeline_with_qa.harness.io_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbed/harness_pipeline_with_app3.harness.io_domain" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbed/all_fields_with_artifact_metadata" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer/empty_issuer_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer/malformed_issuer_-_missing_scheme" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer/malformed_issuer_-_invalid_URL" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer/malformed_issuer_-_invalid_characters" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer/malformed_issuer_-_no_host" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMalformedIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/empty_accountID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/empty_organizationID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/empty_projectID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/empty_pipelineID" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/all_required_fields_empty" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/accountID_with_special_characters" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields/fields_with_spaces" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/harness" name="TestEmbedWithMissingRequiredFields" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="12" failures="0" time="3.455000" name="github.com/sigstore/fulcio/pkg/identity/kubernetes" timestamp="2026-05-22T16:18:36+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestEmbed/Kubernetes_value_with_bad_URL_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestEmbed/Good_Kubernetes_value/Issuer_is_k8s.example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestEmbed/Good_Kubernetes_value/SAN_is_https://k8s.example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestEmbed/Good_Kubernetes_value" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/kubernetes" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="21" failures="0" time="3.501000" name="github.com/sigstore/fulcio/pkg/identity/spiffe" timestamp="2026-05-22T16:18:36+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestPrincipalFromIDToken/Issuer_URL_mismatch_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestPrincipalFromIDToken/Incorrect_trust_domain_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestPrincipalFromIDToken/Invalid_ID_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed/Spiffe_value_with_bad_URL_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed/Empty_issuer_url_should_fail_to_render_extensions" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed/Good_spiffe_challenge/Issuer_is_example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed/Good_spiffe_challenge/SAN_is_spiffe://example.com/foo/bar" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed/Good_spiffe_challenge" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestEmbed" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestValidSpiffeID/Valid_ID_with_matching_trust_domain_results_in_no_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestValidSpiffeID/Invalid_trust_domain_errors" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestValidSpiffeID/Trust_domain_mismatch_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestValidSpiffeID/Invalid_spiffe_id_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/spiffe" name="TestValidSpiffeID" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="18" failures="0" time="3.469000" name="github.com/sigstore/fulcio/pkg/identity/uri" timestamp="2026-05-22T16:18:37+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Issuer_URL_mismatch_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Subject_as_an_email_address_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Incorrect_subject_domain_hostname_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Incorrect_subject_domain_scheme_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken/Invalid_uri_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed/invalid_uri_fails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed/Empty_issuer_url_should_fail_to_render_extensions" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed/Valid_uri_challenge/Issuer_is_example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed/Valid_uri_challenge/SAN_is_https://example.com/users/1" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed/Valid_uri_challenge" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/uri" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="15" failures="0" time="3.464000" name="github.com/sigstore/fulcio/pkg/identity/username" timestamp="2026-05-22T16:18:37+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestIssuer/match" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestIssuer/authenticate" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestPrincipalFromIDToken/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestPrincipalFromIDToken/username_with_!_character_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestPrincipalFromIDToken/username_as_an_email_address_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestPrincipalFromIDToken/invalid_issuer_should_error" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestPrincipalFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestName/Valid_token_authenticates_with_correct_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestName" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestEmbed/Empty_issuer_url_should_fail_to_render_extensions" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestEmbed/Valid_uri_challenge/Issuer_is_example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestEmbed/Valid_uri_challenge/SAN_is_alice!example.com" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestEmbed/Valid_uri_challenge" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/identity/username" name="TestEmbed" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/log" timestamp="2026-05-22T16:18:37+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="7" failures="0" time="3.771000" name="github.com/sigstore/fulcio/pkg/oauthflow" timestamp="2026-05-22T16:18:37+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken/token_with_nil_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken/token_with_empty/no_claims" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken/token_with_non-verified_claims_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken/token_missing_email_claim" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken/token_with_claims_set" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestEmailFromIDToken" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/oauthflow" name="TestIssuerFromIDToken" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="37" failures="0" time="5.808000" name="github.com/sigstore/fulcio/pkg/server" timestamp="2026-05-22T16:18:38+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestMissingGetTrustBundleFails" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetTrustBundleSuccess" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetConfiguration" time="0.340000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetConfigurationFromYaml" time="0.400000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithEmail" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithUsername" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithUriSubject" time="0.060000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithKubernetes" time="0.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithBuildkite" time="0.100000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithGitHub" time="0.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithCiProvider" time="0.040000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithGitLab" time="0.060000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithCodefresh" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithChainguard" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithIssuerClaimConfig" time="0.010000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithRSA" time="0.160000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithCSRChallenge" time="0.110000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithCSRChallengeRSA" time="0.080000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInsecurePublicKey" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithoutPublicKey" time="0.050000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInvalidChallenge" time="0.030000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInvalidPublicKey" time="0.070000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInvalidCSR" time="0.020000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInvalidCSRSignature" time="0.060000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestAPIWithInvalidCSRPublicKey" time="0.070000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestIssuerPool" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/email" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/github" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/spiffe" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/kubernetes" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/uri" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer/username" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestGetIssuer" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestWithMaxBytes/Less_than_max" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestWithMaxBytes/At_max" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestWithMaxBytes/Over_max" time="0.000000"></testcase>
+		<testcase classname="github.com/sigstore/fulcio/pkg/server" name="TestWithMaxBytes" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/pkg/test" timestamp="2026-05-22T16:18:38+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/sigstore/fulcio/test/prometheus" timestamp="2026-05-22T16:18:38+05:30">
+		<properties>
+			<property name="go.version" value="go1.26.0 darwin/arm64"></property>
+		</properties>
+	</testsuite>
+</testsuites>
