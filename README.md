@@ -4,7 +4,7 @@
   <img style="max-width: 100%;width: 300px;margin-top: 20px;" src="https://raw.githubusercontent.com/sigstore/community/main/artwork/fulcio/horizontal/color/sigstore_fulcio-horizontal-color.svg" alt="Fulcio logo"/>
 </p>
 
-# Fulcio
+# Fulcio Forked
 
 _A Free-to-Use CA For Code Signing_
 
