@@ -107,7 +107,7 @@ openssl dgst -sha256 -verify artifact.pub -signature fulcio-release.sig.decoded 
 ## API
 
 The API is defined [here](./fulcio.proto). The API can be accessed
-over [HTTP](https://www.sigstore.dev/swagger/?urls.primaryName=Fulcio) or gRPC.
+over [HTTP](https://www.sigstore.dev/swagger/?urls.primaryName=Fulcio) or over gRPC.
 
 ## Certificate Transparency
 
