@@ -2,7 +2,7 @@
 
 ## Summary
 
-Fulcio uses OIDC tokens to authenticate requests. Subject-related claims from the OIDC token are extracted and included in issued certificates.
+Fulcio uses OIDC tokens to authenticate requests in keyless way. Subject-related claims from the OIDC token are extracted and included in issued certificates.
 
 Sigstore runs a federated OIDC identity provider, Dex. Users authenticate to their preferred identity provider and Dex creates an OIDC token with claims from the original OIDC token. Fulcio also supports OIDC tokens from additional configured issuers.
 
