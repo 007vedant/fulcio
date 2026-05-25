@@ -131,7 +131,7 @@ process](https://github.com/sigstore/.github/blob/main/SECURITY.md).
 Fulcio is developed as part of the [`sigstore`](https://sigstore.dev) project.
 
 We also use a [slack channel](https://sigstore.slack.com)!
-To get more information about Slack and other communication channels please check the [community repository](https://github.com/sigstore/community?tab=readme-ov-file#slack)
+To get more information about Slack and other communication channels please view the [community repository](https://github.com/sigstore/community?tab=readme-ov-file#slack)
 
 ## Additional Documentation Reference
 
@@ -143,7 +143,7 @@ In addition to this README file, the docs folder contains the additional documen
 - **hsm-support.md**. Using Fulcio with a pkcs11 capable device such as SoftHSM.
 - **oid-info.md**. Sigstore OID information.  
 - **security-model.md**. Fulcio’s security model and a discussion of short-lived certificates.
-- **setup.md**. Setting up a local Fulcio instance
+- **setup.md**. Setting up a Fulcio instance locally
 
 If you are making changes to any of these subjects, make sure you also edit the appropriate file listed above.
 
