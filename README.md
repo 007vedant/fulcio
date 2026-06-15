@@ -123,7 +123,7 @@ which will detect misconfiguration or potential compromise of the user's identit
 
 ## Security
 
-Please report any vulnerabilities following sigstore's [security
+Please report any of the vulnerabilities following sigstore's [security
 process](https://github.com/sigstore/.github/blob/main/SECURITY.md).
 
 ## Info
