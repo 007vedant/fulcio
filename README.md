@@ -106,6 +106,15 @@ openssl dgst -sha256 -verify artifact.pub -signature fulcio-release.sig.decoded 
 
 ## Getting Started
 
+### Prerequisites
+
+Before running Fulcio locally, make sure you have the following installed:
+
+- **Go** 1.21 or later — required to build the Fulcio binary from source.
+- **Docker** and **Docker Compose** — used to spin up the local development stack (Fulcio, the CT log, and supporting services).
+- **openssl** — used to inspect and verify certificates during local testing.
+- A reachable **OIDC issuer** — Fulcio issues certificates against an OIDC identity. For local development you can use a test issuer as described in [docs/setup.md](docs/setup.md).
+
 To run a Fulcio instance locally, follow the step-by-step instructions in
 [docs/setup.md](docs/setup.md). It covers configuring an OIDC issuer, starting the
 service, and requesting your first short-lived signing certificate.
