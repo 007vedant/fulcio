@@ -104,6 +104,15 @@ openssl dgst -sha256 -verify artifact.pub -signature fulcio-release.sig.decoded 
 ```
 
 
+## Getting Started
+
+To run a Fulcio instance locally, follow the step-by-step instructions in
+[docs/setup.md](docs/setup.md). It covers configuring an OIDC issuer, starting the
+service, and requesting your first short-lived signing certificate.
+
+If you need a Fulcio-compliant certificate chain for a private instance, use the
+[Certificate Maker](docs/certificate-maker.md) tool described above.
+
 ## API
 
 The API is defined [here](./fulcio.proto). The API can be accessed
