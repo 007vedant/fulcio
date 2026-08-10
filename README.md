@@ -151,7 +151,7 @@ Fulcio is developed as part of the [`sigstore`](https://sigstore.dev) project.
 We also use a [slack channel](https://sigstore.slack.com)!
 To get more information about Slack and other communication channels please view the [community repository](https://github.com/sigstore/community?tab=readme-ov-file#slack)
 
-## Additional Documentation Reference
+## Additional Documentation for Reference
 
 In addition to this README file, the docs folder contains the additional documentation:
 
