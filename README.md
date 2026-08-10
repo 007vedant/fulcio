@@ -164,4 +164,3 @@ In addition to this README file, the docs folder contains the additional documen
 - **setup.md**. Setting up a Fulcio instance locally
 
 If you are making changes to any of these subjects, make sure you also edit the appropriate doc listed above.
-
