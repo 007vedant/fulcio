@@ -153,7 +153,7 @@ To get more information about Slack and other communication channels please view
 
 ## Additional Documentation for Reference
 
-In addition to this README file, the docs folder contains the additional documentation:
+In addition to this README file, the docs folder contains the additional helper documentation:
 
 - **certificate-specification.md**. This file includes the requirements for root, intermediate, and issued certificates.   The document applies to all instances of Fulcio, including the production instance and all private instances.
 - **ctlog.md**. Certificate transparency log information, including information on signed certificate timestamps and a sharding strategy for the  CT log.
