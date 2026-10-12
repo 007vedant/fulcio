@@ -31,7 +31,7 @@ To do this, install and use [go-tuf](https://github.com/theupdateframework/go-tu
 $ go install github.com/theupdateframework/go-tuf/cmd/tuf-client@latest
 ```
 
-Then, obtain trusted root keys for Sigstore. You will use the 5th iteration of Sigstore's TUF root to start the root of trust, due to
+Then, obtain trusted root keys for Sigstore. You should use the 5th iteration of Sigstore's TUF root to start the root of trust, due to
 a backwards incompatible change.
 
 ```
