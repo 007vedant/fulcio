@@ -18,6 +18,7 @@ from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
 from locust import HttpUser, task, constant_throughput, events
 import jwt
+from jwt import PyJWKClient
 
 @events.init_command_line_parser.add_listener
 def _(parser):
@@ -32,6 +33,34 @@ class FulcioUser(HttpUser):
     def wait_time(self):
         return constant_throughput(self.environment.parsed_options.max_qps_per_user)(self)
 
+    def on_start(self):
+        # Verify the JWT token once per user instance to ensure integrity.
+        # Static ID token avoids hitting the OIDC provider with each request.
+        token = self.environment.parsed_options.token
+
+        # Get issuer from token to construct JWKS URL
+        unverified_claims = jwt.decode(token, options={"verify_signature": False})
+        issuer = unverified_claims.get('iss')
+
+        if not issuer:
+            raise ValueError("Token missing 'iss' claim - cannot verify signature")
+
+        # Construct JWKS URL following OIDC standard
+        jwks_url = f"{issuer}/.well-known/jwks.json"
+
+        # Fetch signing key and verify token
+        jwks_client = PyJWKClient(jwks_url)
+        signing_key = jwks_client.get_signing_key_from_jwt(token)
+
+        # Verify token signature and extract email
+        verified_token = jwt.decode(
+            token,
+            signing_key.key,
+            algorithms=["RS256", "ES256", "HS256"],
+            options={"verify_signature": True, "verify_aud": False}
+        )
+        self.email = verified_token['email']
+
     @task
     def create_cert(self):
         # create_cert generates a keypair and makes a request to Fulcio to fetch a certificate.
@@ -45,8 +74,8 @@ class FulcioUser(HttpUser):
         pubbytes = pubkey.public_bytes(Encoding.DER, PublicFormat.SubjectPublicKeyInfo)
         content = base64.b64encode(pubbytes).decode("utf-8")
 
-        # Fetch identity of token and sign.
-        email = jwt.decode(token, options={"verify_signature":False})['email']
+        # Use verified email (verified once in on_start) and sign.
+        email = self.email
         data = email.encode()
         signature = privkey.sign(data, ec.ECDSA(hashes.SHA256()))
         challenge = base64.b64encode(signature).decode("utf-8")

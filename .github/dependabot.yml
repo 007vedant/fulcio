@@ -20,6 +20,8 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       all:
         update-types:
@@ -28,6 +30,8 @@ updates:
     directory: "./hack/tools"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       all:
         update-types:
@@ -37,6 +41,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       all:
         update-types:
@@ -46,6 +52,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       all:
         update-types:
@@ -55,6 +63,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       all:
         update-types:

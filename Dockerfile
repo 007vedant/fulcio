@@ -32,12 +32,23 @@ FROM golang:1.26.3@sha256:313faae491b410a35402c05d35e7518ae99103d957308e940e1ae2
 
 # Retrieve the binary from the previous stage
 COPY --from=builder /opt/app-root/src/server /usr/local/bin/fulcio-server
+
+# Create non-root user and switch to it
+RUN useradd -r -u 65533 -g root -m -d /home/nonroot nonroot
+USER nonroot
+
 # Set the binary as the entrypoint of the container
 ENTRYPOINT ["/usr/local/bin/fulcio-server", "serve"]
 
 # debug compile options & debugger
 FROM deploy AS debug
+
+# Switch back to root for build operations
+USER root
 RUN go install github.com/go-delve/delve/cmd/dlv@v1.22.1
 
 # overwrite server and include debugger
 COPY --from=builder /opt/app-root/src/server_debug /usr/local/bin/fulcio-server
+
+# Switch back to non-root user for runtime
+USER nonroot

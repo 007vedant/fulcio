@@ -189,7 +189,6 @@ func main() {
 
 	client, err := privateca.NewCertificateAuthorityClient(context.Background())
 	if err != nil {
-		client.Close()
 		log.Fatal(err)
 	}
 	parsedCerts, err := fetchCACertificate(context.Background(), *gcpCaParent, *kmsKey, *tinkKeysetPath, *tinkKmsKey, client)

@@ -18,6 +18,7 @@ package app
 import (
 	"context"
 	"crypto/tls"
+	"crypto/x509"
 	"errors"
 	"fmt"
 	"net"
@@ -59,8 +60,26 @@ func extractOIDCTokenFromAuthHeader(_ context.Context, req *http.Request) metada
 func createHTTPServer(ctx context.Context, serverEndpoint string, grpcServer, legacyGRPCServer *grpcServer) httpServer {
 	opts := []grpc.DialOption{}
 	if grpcServer.ExposesGRPCTLS() {
-		/* #nosec G402 */ // InsecureSkipVerify is only used for the HTTP server to call the TLS-enabled grpc endpoint.
-		opts = append(opts, grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{InsecureSkipVerify: true})))
+		tlsConfig := &tls.Config{
+			MinVersion: tls.VersionTLS13,
+		}
+
+		// Load the gRPC server's certificate for verification against localhost
+		certPath := viper.GetString("grpc-tls-certificate")
+		if certPath != "" {
+			certPEM, err := os.ReadFile(certPath)
+			if err != nil {
+				log.Logger.Fatal(err)
+			}
+			certPool := x509.NewCertPool()
+			if !certPool.AppendCertsFromPEM(certPEM) {
+				log.Logger.Fatal("failed to add gRPC server certificate to pool")
+			}
+			tlsConfig.RootCAs = certPool
+			tlsConfig.ServerName = "localhost"
+		}
+
+		opts = append(opts, grpc.WithTransportCredentials(credentials.NewTLS(tlsConfig)))
 	} else {
 		opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	}
