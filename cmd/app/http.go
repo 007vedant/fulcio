@@ -60,7 +60,9 @@ func extractOIDCTokenFromAuthHeader(_ context.Context, req *http.Request) metada
 func createHTTPServer(ctx context.Context, serverEndpoint string, grpcServer, legacyGRPCServer *grpcServer) httpServer {
 	opts := []grpc.DialOption{}
 	if grpcServer.ExposesGRPCTLS() {
-		tlsConfig := &tls.Config{}
+		tlsConfig := &tls.Config{
+			MinVersion: tls.VersionTLS13,
+		}
 
 		// Load the gRPC server's certificate for verification against localhost
 		certPath := viper.GetString("grpc-tls-certificate")
