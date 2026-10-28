@@ -38,7 +38,7 @@ services:
       - "5554:5554"
       - "${FULCIO_METRICS_PORT:-2112}:2112"
     volumes:
-      - ~/.config/gcloud:/root/.config/gcloud/:z # for GCP authentication
+      - ~/.config/gcloud:/home/nonroot/.config/gcloud/:z # for GCP authentication
       - ${FULCIO_CONFIG:-./config/identity/config.yaml}:/etc/fulcio-config/config.yaml:z
       - ./config/fulcio-root:/etc/fulcio:ro
     healthcheck:
