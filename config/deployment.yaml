@@ -79,6 +79,7 @@ spec:
             memory: "1G"
             cpu: ".5"
         securityContext:
+          allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
           runAsNonRoot: true
           runAsUser: 65533
